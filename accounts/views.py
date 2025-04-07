@@ -26,7 +26,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('/')
+            return redirect('home')
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})
@@ -50,9 +50,9 @@ def edit_profile_view(request):
             form.save()
             messages.success(request, "Profile updated successfully.")
             return redirect('profile')
-        else:
+    else:
             form = UpdateProfileForm(instance=request.user)
-        return render(request, 'accounts/edit_profile.html', {'form': form})
+    return render(request, 'accounts/edit_profile.html', {'form': form})
 
     
 
