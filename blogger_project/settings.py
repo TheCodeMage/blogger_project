@@ -69,6 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blogger_project.wsgi.application'
 
+LOGIN_URL = '/accounts/login' #login_required redirect URL
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
