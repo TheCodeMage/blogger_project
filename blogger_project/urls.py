@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')), # Include accounts app
     path('', include('pages.urls')), #Home app URLs
+    path('posts/', include('posts.urls')), # posts app
 ]
